@@ -1,0 +1,36 @@
+td>input{
+    height: 99%;
+    width: 98.5%;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    outline: 0px;
+    border-radius: 0px;
+}
+td>input:focus{
+    background-color: rgb(128, 255, 128);
+}
+.cost>input{
+    width: 75%;
+}
+.lastSP>input{
+    width: 75%;
+}
+.quantity>input{
+    width: 61%;
+}
+.priceIN>input{
+    width: 84%;
+}
+.priceEX>input{
+    width: 84%;
+}
+.taxable>input{
+    width: 79%;
+}
+.discount>input{
+    width: 75%;
+}
+.totalAMT>input{
+    width: 75%;
+}

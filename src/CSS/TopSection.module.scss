@@ -1,0 +1,170 @@
+@import "../SASS/Input.scss";
+@import "../SASS/Select.scss";
+
+input{
+    outline: $input-outline;
+    border: $input-border;
+    border-radius: $input-BorderRadius;
+    padding-left: $input-PaddingLeft;
+    height: $input-height;
+    background-color: $input-backgroundColor;
+}
+select{
+    outline: $Select-outline;
+    border: $Select-border;
+    border-radius: $Select-BorderRadius;
+    padding: $Select-Padding;
+    height: $Select-height;
+    cursor: pointer;
+}
+
+#TopSection{
+    width: 100%;
+    height: 100px;
+    // background-color: rgb(191, 83, 43);
+    position: fixed;
+    top: 0px;
+    background-color: white;
+    padding-bottom: 20px;
+}
+
+
+#TopSection>div:nth-child(2){
+    width: 95%;
+    height: 40%;
+    // background-color: green;
+    margin:auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#InvoiceNumber{
+    width: 40%;
+    height: 100%;
+    // background-color: pink;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+}
+#InvoiceNumber>input{
+    width: 40%;
+}
+#InvoiceDate{
+    width: 25%;
+    // background-color: gray;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+}
+#InvoiceDate>input{
+    width: 100px;
+}
+#date{
+    width: 20%;
+    // background-color: yellow;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+}
+#date>input{
+    width: 100px;
+}
+
+
+#TopSection>div:nth-child(1){
+    width: 95%;
+    height:60%;
+    margin: auto;
+    // background-color: pink;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#TopSection>div:nth-child(1)>div:nth-child(1){
+    height: 100%;
+    width: 100%;
+    // background-color: aqua;
+}
+
+#Details{
+    width: 99.5%;
+    height: 90%;
+    border: 2px solid rgb(15, 180, 0);
+    border-top: 0px;
+    background-color: rgba(46, 200, 69, 0.214);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#Details>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 25%;
+    width: 25%;
+}
+#Details>div>h4{
+    // width: 30%;
+    text-align: start;
+}
+#Details>div>input{
+    // width: 60%;
+}
+#Details>div>select{
+    height: 28px;
+    width: 63%;
+    border-radius: 6px;
+}
+
+
+#sideBar {
+    height: 60%; /* 100% Full-height */
+    // width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    // top: 0;
+    background-color:rgb(48, 48, 48); /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    // padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    // z-index: 2;
+    margin-top: 68px;
+    margin-right: 38px;
+    padding: 0px;
+}
+#sideBar {
+    right: 0;
+    z-index: 2;
+}
+ul{
+    list-style: none;
+    text-align: start;
+    color: white;
+    width: 100%;
+}
+li{
+    width: 100%;
+    margin-left: -40px;
+    padding-left: 10px;
+}
+#activeList{
+    background-color: yellow;
+    color: black;
+}
+#defaultList{
+    text-align:center;
+    padding:0px;
+    font-weight: 600;
+}
+
+#activeInput{
+    border: 2px solid green;
+    background-color: rgb(217, 255, 217);
+}
