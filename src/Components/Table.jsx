@@ -2,15 +2,19 @@ import { useSelector } from "react-redux"
 import style from "../CSS/Table.module.scss"
 import SideBar from "./SideBar"
 import TableRow from "./TableRow";
+import { useState } from "react";
 
 
 const Table = ()=>{
 
     const TableData = useSelector(store=>store.TableReducer.data);
+    const [Data,setData] = useState([]);
+    console.log(TableData)
 
     
 
     return <div id={style.Table}>
+
         <table>
             {/* Head */}
             <tr>
@@ -67,6 +71,7 @@ const Table = ()=>{
             {
                 TableData?.map((e,i)=> <TableRow i={i+1} {...e} TableData={TableData}/> )
             }
+             <TableRow i={TableData?TableData?.length+1:1} />
             
         </table>
     </div>

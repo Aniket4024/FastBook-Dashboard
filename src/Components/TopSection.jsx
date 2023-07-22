@@ -52,7 +52,7 @@ const TopSection = ()=>{
         setBuyerAddress(BuyerData.address)
         setBuyerGSTID(BuyerData.gstID)
         setBuyerMobile(BuyerData.mobile)
-        dispatch(TableData(BuyerData.items))
+        
     },[BuyerData])
 
     return <div id={style.TopSection}>
@@ -79,11 +79,17 @@ const TopSection = ()=>{
                                 if(e.keyCode===13 || (e.keyCode===39 && e.ctrlKey)){
                                     // console.log(BuyerActiveList.current.value)
                                     if(width!=="0px"){
+
+                                        
+
                                         dispatch(BuyerItems(BuyerActiveList.current.value))
                                         dispatch(SideBarClose())
+                                        setActiveList(1)
+
                                     }
                                     else{
                                         document.getElementById("address").focus()
+                                        setActiveList(1)
                                     }
                                 }
                                 if(e.keyCode===38){

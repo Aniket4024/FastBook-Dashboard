@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react"
 import { useDispatch, useSelector } from "react-redux";
 import {  SideBarBuyers, SideBarClose, SideBarItems } from "../REDUX/SideBarReducer/action";
 import { SideBarItemActive, SideBarItemClose, SideBarItemSuccess } from "../REDUX/SideBarItemReducer/action";
+import { TableData1 } from "../REDUX/TableReducer/action";
 
 const TableRow = ({i,name,hsnId,GST,unitId,openingStock,openingValue,alias,TableData})=>{
 
@@ -60,6 +61,9 @@ const TableRow = ({i,name,hsnId,GST,unitId,openingStock,openingValue,alias,Table
                     }
                     if(e.keyCode===39 && e.ctrlKey){
                         document.getElementById(`HSNID${i}`).focus()
+                        
+                        
+
                     }
                     if(e.keyCode===13){
                         if(width!=="0px"){
@@ -72,6 +76,18 @@ const TableRow = ({i,name,hsnId,GST,unitId,openingStock,openingValue,alias,Table
                                 setItemOpeningStock(res.data.openingStock)
                                 setItemOpeningValue(res.data.openingValue)
                                 setItemAlias(res.data.alias)
+                                let obj={
+                                    id: 0,
+                                    name: res.name,
+                                    description: res.description,
+                                    alias: res.alias,
+                                    unitId: res.unitId,
+                                    hsnId: res.hsnId,
+                                    openingStock: res.openingStock,
+                                    openingValue: res.openingValue,
+                                    GST: res.gst
+                                }
+                                dispatch(TableData1(obj))
                             })
                             .catch((err)=>{
                                 console.log(err);

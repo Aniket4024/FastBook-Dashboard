@@ -8,7 +8,7 @@ const initialState = {
 export const reducer = (state=initialState,{type,payload})=>{
     switch(type){
         case TABLE_SUCCESS:
-            return {...state,data:payload};
+            return {...state,data:[...state.data,payload]};
         default:
             return state
     }
